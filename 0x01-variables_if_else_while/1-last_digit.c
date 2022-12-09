@@ -12,6 +12,7 @@ int main(void)
 {
 	int n;
 	int x;
+
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	x = n % 10;
@@ -20,7 +21,7 @@ int main(void)
 	{
 		printf("and is greater than 5");
 	}
-	if (x==0)
+	if (x == 0)
 	{
 		printf("and is 0");
 	}
