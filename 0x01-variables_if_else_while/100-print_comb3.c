@@ -12,17 +12,16 @@ int main(void)
 
 	for (x = 0; x <= 9; x++)
 	{
-		for (y = 0; y <= 9; y++)
-			if (!((x == y) || (y > x)))
+		for (y = x + 1; y <= 9; y++)
+		{
+			putchar(x + '0');
+			putchar(y + '0');
+			if (x < 8)
 			{
-				putchar(x);
-				putchar(y);
-				if (!(x == 9 && y == 8))
-				{
-					putchar(',');
-					putchar(' ');
-				}
+				putchar(',');
+				putchar(' ');
 			}
+		}
 	}
 	putchar('\n');
 	return (0);
