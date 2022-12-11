@@ -3,20 +3,26 @@
  * main - combination of two digits
  *
  * Return: 0
- */
+*/
 
 int main(void)
 {
 	int x;
+	int y;
 
-	for (x = 01; x < 90; x != 10; x++)
+	for (x = 0; x <= 9; x++)
 	{
-		putchar(x + '01');
-		if (x < 89)
-		{
-			putchar(',');
-			putchar(' ');
-		}
+		for (y = 0; y <= 9; y++)
+			if (!((x == y) || (y > x)))
+			{
+				putchar(x);
+				putchar(y);
+				if (!(x == 9 && y == 8))
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
 	}
 	putchar('\n');
 	return (0);
