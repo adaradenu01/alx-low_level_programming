@@ -11,18 +11,20 @@ int main(void)
 	int y;
 	int z;
 
-	for (x = 0; x < 9; x++)
+	for (x = 48; x < 58; x++)
 	{
-		for (y = 0; y < 9; y++)
+		for (y = 48; y < 58; y++)
 		{
 			if (y > x)
 			{
-				for (z = 0; z < 9; z++)
+				for (z = 48; z < 58; z++)
 				{
+					if (z > y)
+					{
 					putchar(x);
 					putchar(y);
 					putchar(z);
-					if (x == 7 && y == 8 && z == 9)
+					if (x == 55 && y == 56 && z == 57)
 					{
 						break;
 					}
@@ -30,6 +32,7 @@ int main(void)
 					putchar(' ');
 					}
 				}
+			}
 		}
 	}
 	putchar('\n');
