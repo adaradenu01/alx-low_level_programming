@@ -1,9 +1,10 @@
 #include "main.h"
 /**
  * print_chessboard - print a chessboard.
+ *
  * @a: pointer to variable
  *
- * Return: 0
+ *
  */
 
 void print_chessboard(char (*a)[8])
