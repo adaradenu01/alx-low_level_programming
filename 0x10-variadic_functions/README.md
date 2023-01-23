@@ -1,1 +1,1 @@
-Variadic Functions in C
+variadic functions in C
