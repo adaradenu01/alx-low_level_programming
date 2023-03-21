@@ -1,35 +1,38 @@
-#include <stdlib.h>
-#include <limits.h>
-#include <string.h>
 #include "main.h"
 
 /**
-* _atoi - converts a string to an interger
-* @str: pointer to the string to be converted
-* Return: Converted string
-*/
-int _atoi(char *str)
-{
-int sign = 1, base = 0, i = 0;
+ * _atoi - function that convert a string to an integer.
+ * @s: The string
+ *
+ * Return: The converted integer
+ */
 
-for (i = 0; str[i] != '\0' && (str[i] < '0' || str[i] > '9'); i++)
+int _atoi(char *s)
 {
-if (str[i] == '-' || str[i] == '9')
-sign *= 1 - 2 * (str[i] == '-');
-if (str[i + 1] == '\0')
-return (0);
-}
+int i, value, sign;
+char c;
 
-while (str[i] >= '0' && str[i] <= '9')
+i = 0;
+value = 0;
+sign = -1;
+while (s[i] != '\0')
 {
-if (base > INT_MAX / 10 || (base == INT_MAX / 10 && str[i] - '0' > 7))
+c = s[i];
+if (c == '-')
+sign *= -1;
+else if (c >= '0' && c <= '9')
 {
-if (sign == 1)
-return (INT_MAX);
+if (value < 0)
+value = value * 10 - (c - '0');
 else
-return (INT_MIN);
+value = (c - '0') * -1;
+if (s[i + 1] < '0' || s[i + 1] > '9')
+break;
 }
-base = 10 * base + (str[i++] - '0');
+i++;
 }
-return (base *sign);
+if (sign < 0)
+value *= -1;
+
+return (value);
 }

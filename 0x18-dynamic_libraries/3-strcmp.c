@@ -1,20 +1,21 @@
 #include "main.h"
+
 /**
-* _strcmp - Compares two strings
-* @s1: first string
-* @s2: second string
-* Return: An integer (0 if equal, +ve if s1 > s2, _ve if s1 < s2)
+* _strcmp - Compares two strings.
+* @s1: First string
+* @s2: Second string
+*
+* Return: 0 if similar, positive number if s1 > s2, otherwise negative number
 */
 int _strcmp(char *s1, char *s2)
 {
-int count = 0, count2 = 0;
+int i;
 
-while (count == 0)
+for (i = 0; s1[i] != '\0' || s2[i] != '\0'; i++)
 {
-if (*(s1 + count2) == '\0' && *(s2 + count2) == '\0')
-break;
-count = *(s1 + count2) - *(s2 + count2);
-count2++;
+if (s1[i] != s2[i])
+return (s1[i] - s2[i]);
 }
-return (count);
+
+return (0);
 }
