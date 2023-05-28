@@ -1,9 +1,10 @@
 # 0x1C. C - Makefiles
-`''C''`
+## `C`
+
 <img src="https://s3.amazonaws.com/intranet-projects-files/holbertonschool-low_level_programming/273/giphy-2.gif">
 
 # Resources
-''Read or watch:''
+**Read or watch:**
 
 - [Makefile](https://www.google.com/search?q=makefile)
 - [Installing the make utility](https://www.gnu.org/software/make/manual/html_node/)
